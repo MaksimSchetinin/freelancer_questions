@@ -1,0 +1,114 @@
+input_question,output_answer,output_check,output_query,output_question,output_result
+"Какое среднее количество завершённых проектов у фрилансеров уровня ""Expert"" в категории ""Graphic Design""?","Среднее количество завершённых проектов у фрилансеров уровня ""Expert"" в категории ""Graphic Design"" составляет примерно 149.91.",true,SELECT AVG(Job_Completed) AS Average_Completed_Projects FROM freelancer_earnings_bd WHERE Experience_Level = 'Expert' AND Job_Category = 'Graphic Design',"Какое среднее количество завершённых проектов у фрилансеров уровня ""Expert"" в категории ""Graphic Design""?","[(149.9090909090909,)]"
+"Какая категория проектов имеет наибольшую среднюю ставку оплаты за проект у фрилансеров уровня ""Intermediate""?","Категория проектов, имеющая наибольшую среднюю ставку оплаты за проект у фрилансеров уровня ""Intermediate"", - это ""SEO"" с средней ставкой 60.20 долларов в час.",true,"SELECT Job_Category, AVG(Hourly_Rate) AS Average_Hourly_Rate
+FROM freelancer_earnings_bd
+WHERE Experience_Level = 'Intermediate'
+GROUP BY Job_Category
+ORDER BY Average_Hourly_Rate DESC
+LIMIT 1;","Какая категория проектов имеет наибольшую среднюю ставку оплаты за проект у фрилансеров уровня ""Intermediate""?","[('SEO', 60.20120481927709)]"
+"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Beginner"" в категории ""Graphic Design""?","Средняя ставка оплаты за проект для фрилансеров уровня ""Beginner"" в категории ""Graphic Design"" составляет примерно 51.15.",true,"SELECT AVG(Hourly_Rate) AS Average_Hourly_Rate 
+FROM freelancer_earnings_bd 
+WHERE Experience_Level = 'Beginner' AND Job_Category = 'Graphic Design'","Какая средняя ставка оплаты за проект для фрилансеров уровня ""Beginner"" в категории ""Graphic Design""?","[(51.15370786516857,)]"
+"Какая категория проектов имеет наибольшую среднюю продолжительность проектов у фрилансеров уровня ""Intermediate""?","Категория проектов с наибольшей средней продолжительностью у фрилансеров уровня ""Intermediate"" — это ""Web Development"", со средней продолжительностью проектов 54.38 дня.",true,"SELECT Job_Category, AVG(Job_Duration_Days) AS Average_Duration
+FROM freelancer_earnings_bd
+WHERE Experience_Level = 'Intermediate'
+GROUP BY Job_Category
+ORDER BY Average_Duration DESC
+LIMIT 1;","Какая категория проектов имеет наибольшую среднюю продолжительность проектов у фрилансеров уровня ""Intermediate""?","[('Web Development', 54.38461538461539)]"
+"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Expert"" в категории ""Data Entry""?","Средняя ставка оплаты за проект для фрилансеров уровня ""Expert"" в категории ""Data Entry"" составляет approximately 45.56 долларов в час.",true,SELECT AVG(Hourly_Rate) AS Average_Hourly_Rate FROM freelancer_earnings_bd WHERE Experience_Level = 'Expert' AND Job_Category = 'Data Entry';,"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Expert"" в категории ""Data Entry""?","[(45.55536231884057,)]"
+"Какая категория проектов имеет наименьшее среднее количество завершённых проектов у фрилансеров уровня ""Beginner""?","Категория проектов с наименьшим средним количеством завершённых проектов у фрилансеров уровня ""Beginner"" — это ""Content Writing"", с средним количеством завершённых проектов примерно 146.24.",true,"SELECT Job_Category, AVG(Job_Completed) as Average_Completed
+FROM freelancer_earnings_bd
+WHERE Experience_Level = 'Beginner'
+GROUP BY Job_Category
+ORDER BY Average_Completed ASC
+LIMIT 1;","Какая категория проектов имеет наименьшее среднее количество завершённых проектов у фрилансеров уровня ""Beginner""?","[('Content Writing', 146.24285714285713)]"
+"Какая средняя продолжительность проектов для фрилансеров уровня ""Expert"" в категории ""Mobile Development""?","Ответ на ваш вопрос: Средняя продолжительность проектов для фрилансеров уровня ""Expert"" в категории ""Mobile Development"" составляет неопределенное значение (None), что может означать, что нет данных о проектах данной категории для фрилансеров с таким уровнем опыта.",true,"SELECT AVG(Job_Duration_Days) AS Average_Project_Duration 
+FROM freelancer_earnings_bd 
+WHERE Experience_Level = 'Expert' AND Job_Category = 'Mobile Development';","Какая средняя продолжительность проектов для фрилансеров уровня ""Expert"" в категории ""Mobile Development""?","[(None,)]"
+"Какая категория проектов имеет наименьшую среднюю продолжительность проектов у фрилансеров уровня ""Beginner""?","Категория проектов с наименьшей средней продолжительностью у фрилансеров уровня ""Beginner"" - это ""Digital Marketing"", с средней продолжительностью 42.67 дня.",true,"SELECT Job_Category, AVG(Job_Duration_Days) as Average_Duration
+FROM freelancer_earnings_bd
+WHERE Experience_Level = 'Beginner'
+GROUP BY Job_Category
+ORDER BY Average_Duration ASC
+LIMIT 1;","Какая категория проектов имеет наименьшую среднюю продолжительность проектов у фрилансеров уровня ""Beginner""?","[('Digital Marketing', 42.666666666666664)]"
+"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Intermediate"" в категории ""Web Development""?","Средняя ставка оплаты за проект для фрилансеров уровня ""Intermediate"" в категории ""Web Development"" составляет примерно 53.95 долларов в час.",true,"SELECT AVG(Hourly_Rate) AS Average_Hourly_Rate
+FROM freelancer_earnings_bd
+WHERE Experience_Level = 'Intermediate' AND Job_Category = 'Web Development';","Какая средняя ставка оплаты за проект для фрилансеров уровня ""Intermediate"" в категории ""Web Development""?","[(53.950897435897424,)]"
+"Какая категория проектов имеет наибольшее среднее количество завершённых проектов у фрилансеров уровня ""Expert""?","Категория проектов с наибольшим средним количеством завершённых проектов у фрилансеров уровня ""Expert"" — это ""Цифровой маркетинг"" (Digital Marketing) с средним количеством завершённых проектов 158.34.",true,"SELECT Job_Category, AVG(Job_Completed) AS Average_Completed
+FROM freelancer_earnings_bd
+WHERE Experience_Level = 'Expert'
+GROUP BY Job_Category
+ORDER BY Average_Completed DESC
+LIMIT 1;","Какая категория проектов имеет наибольшее среднее количество завершённых проектов у фрилансеров уровня ""Expert""?","[('Digital Marketing', 158.34177215189874)]"
+Какая категория проектов имеет наименьшее количество фрилансеров?,"Категория проектов, имеющая наименьшее количество фрилансеров, - это ""Content Writing"", с количеством 231 фрилансера.",true,"SELECT Job_Category, COUNT(Freelancer_ID) AS Freelancer_Count 
+FROM freelancer_earnings_bd 
+GROUP BY Job_Category 
+ORDER BY Freelancer_Count ASC 
+LIMIT 1;",Какая категория проектов имеет наименьшее количество фрилансеров?,"[('Content Writing', 231)]"
+"Какое среднее количество завершённых проектов у фрилансеров уровня ""Beginner""?","Среднее количество завершённых проектов у фрилансеров уровня ""Beginner"" составляет примерно 156,4.",true,SELECT AVG(Job_Completed) AS Average_Completed_Jobs FROM freelancer_earnings_bd WHERE Experience_Level = 'Beginner';,"Какое среднее количество завершённых проектов у фрилансеров уровня ""Beginner""?","[(156.39970059880238,)]"
+Какая категория проектов имеет наибольшую среднюю продолжительность проектов?,"Категория проектов с наибольшей средней продолжительностью — это ""Web Development"", с средней продолжительностью 46.76 дней.",true,"SELECT Job_Category, AVG(Job_Duration_Days) AS Average_Duration
+FROM freelancer_earnings_bd
+GROUP BY Job_Category
+ORDER BY Average_Duration DESC
+LIMIT 1;",Какая категория проектов имеет наибольшую среднюю продолжительность проектов?,"[('Web Development', 46.76171875)]"
+"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Expert""?","Средняя ставка оплаты за проект для фрилансеров уровня ""Expert"" составляет примерно 52.42 долларов в час.",true,SELECT AVG(Hourly_Rate) AS Average_Hourly_Rate FROM freelancer_earnings_bd WHERE Experience_Level = 'Expert';,"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Expert""?","[(52.422979719188774,)]"
+"Какое среднее количество завершённых проектов у фрилансеров в категории ""Mobile Development""?","Ответ на ваш вопрос: Среднее количество завершённых проектов у фрилансеров в категории ""Mobile Development"" равно нулю, что указывает на отсутствие данных по завершённым проектам в данной категории.",true,SELECT AVG(Job_Completed) AS Average_Completed_Projects FROM freelancer_earnings_bd WHERE Job_Category = 'Mobile Development';,"Какое среднее количество завершённых проектов у фрилансеров в категории ""Mobile Development""?","[(None,)]"
+Какая категория проектов имеет наименьшее среднее количество завершённых проектов?,"Категория проектов с наименьшим средним количеством завершённых проектов — ""Content Writing"".",true,"SELECT Job_Category, AVG(Job_Completed) AS Average_Completed
+FROM freelancer_earnings_bd
+GROUP BY Job_Category
+ORDER BY Average_Completed ASC
+LIMIT 1;",Какая категория проектов имеет наименьшее среднее количество завершённых проектов?,"[('Content Writing', 146.0952380952381)]"
+"Какова средняя продолжительность проектов для фрилансеров уровня ""Intermediate""?","Средняя продолжительность проектов для фрилансеров уровня ""Intermediate"" составляет приблизительно 46.94 дней.",true,"SELECT AVG(Job_Duration_Days) AS Average_Project_Duration 
+FROM freelancer_earnings_bd 
+WHERE Experience_Level = 'Intermediate';","Какова средняя продолжительность проектов для фрилансеров уровня ""Intermediate""?","[(46.94227769110764,)]"
+"Какая средняя ставка оплаты за проект для фрилансеров в категории ""Graphic Design""?","Средняя ставка оплаты за проект для фрилансеров в категории ""Graphic Design"" составляет approximately 51.48 долларов в час.",true,SELECT AVG(Hourly_Rate) AS Average_Hourly_Rate FROM freelancer_earnings_bd WHERE Job_Category = 'Graphic Design',"Какая средняя ставка оплаты за проект для фрилансеров в категории ""Graphic Design""?","[(51.47664150943398,)]"
+"Какое среднее количество завершённых проектов у фрилансеров уровня ""Expert""?","Среднее количество завершённых проектов у фрилансеров уровня ""Expert"" составляет примерно 148.2.",true,SELECT AVG(Job_Completed) AS Average_Completed_Projects FROM freelancer_earnings_bd WHERE Experience_Level = 'Expert',"Какое среднее количество завершённых проектов у фрилансеров уровня ""Expert""?","[(148.2028081123245,)]"
+Какая категория проектов имеет наибольшее количество фрилансеров?,"Категория проектов, имеющая наибольшее количество фрилансеров, — это ""Графический дизайн"", в которой зарегистрировано 265 фрилансеров.",true,"SELECT Job_Category, COUNT(DISTINCT Freelancer_ID) as Freelancer_Count
+FROM freelancer_earnings_bd
+GROUP BY Job_Category
+ORDER BY Freelancer_Count DESC
+LIMIT 1;",Какая категория проектов имеет наибольшее количество фрилансеров?,"[('Graphic Design', 265)]"
+Какое общее количество фрилансеров в датасете?,Общее количество фрилансеров в датасете составляет 1950.,true,SELECT COUNT(DISTINCT Freelancer_ID) AS Total_Freelancers FROM freelancer_earnings_bd;,Какое общее количество фрилансеров в датасете?,"[(1950,)]"
+"Сколько фрилансеров работают в категории ""Data Entry""?","В категории ""Data Entry"" работают 238 фрилансеров.",true,"SELECT COUNT(Freelancer_ID) AS Number_of_Freelancers
+FROM freelancer_earnings_bd
+WHERE Job_Category = 'Data Entry';","Сколько фрилансеров работают в категории ""Data Entry""?","[(238,)]"
+"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Beginner""?","Средняя ставка оплаты за проект для фрилансеров уровня ""Beginner"" составляет approximately 50.96.",true,SELECT AVG(Hourly_Rate) AS Average_Hourly_Rate FROM freelancer_earnings_bd WHERE Experience_Level = 'Beginner',"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Beginner""?","[(50.95952095808381,)]"
+"Сколько фрилансеров имеют уровень опыта ""Beginner""?","Согласно результатам запроса, количество фрилансеров с уровнем опыта ""Beginner"" составляет 668.",true,SELECT COUNT(Freelancer_ID) AS Beginner_Freelancers FROM freelancer_earnings_bd WHERE Experience_Level = 'Beginner';,"Сколько фрилансеров имеют уровень опыта ""Beginner""?","[(668,)]"
+Какова средняя продолжительность проектов в днях?,Средняя продолжительность проектов составляет примерно 44.7 дня.,true,SELECT AVG(Job_Duration_Days) AS Average_Project_Duration FROM freelancer_earnings_bd;,Какова средняя продолжительность проектов в днях?,"[(44.70461538461539,)]"
+"Сколько фрилансеров работают в категории ""Web Development""?","В категории ""Web Development"" работают 256 фрилансеров.",true,SELECT COUNT(Freelancer_ID) AS NumberOfFreelancers FROM freelancer_earnings_bd WHERE Job_Category = 'Web Development',"Сколько фрилансеров работают в категории ""Web Development""?","[(256,)]"
+"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Intermediate""?","Средняя ставка оплаты за проект для фрилансеров уровня ""Intermediate"" составляет примерно 54.43 доллара в час.",true,SELECT AVG(Hourly_Rate) AS Average_Hourly_Rate FROM freelancer_earnings_bd WHERE Experience_Level = 'Intermediate',"Какая средняя ставка оплаты за проект для фрилансеров уровня ""Intermediate""?","[(54.42507020280806,)]"
+"Сколько фрилансеров имеют уровень опыта ""Expert""?","Ответ на ваш вопрос: количество фрилансеров с уровнем опыта ""Expert"" составляет 641.",true,SELECT COUNT(Freelancer_ID) AS NumberOfFreelancers FROM freelancer_earnings_bd WHERE Experience_Level = 'Expert';,"Сколько фрилансеров имеют уровень опыта ""Expert""?","[(641,)]"
+Какое среднее количество завершённых проектов у фрилансеров?,Среднее количество завершённых проектов у фрилансеров составляет примерно 150.86.,true,SELECT AVG(Job_Completed) AS Average_Completed_Projects FROM freelancer_earnings_bd;,Какое среднее количество завершённых проектов у фрилансеров?,"[(150.86410256410255,)]"
+Какие 5 фрилансеров имеют наибольший общий доход?,"Пять фрилансеров с наибольшим общим доходом:
+
+1. Фрилансер ID 598 - 9991 USD
+2. Фрилансер ID 880 - 9988 USD
+3. Фрилансер ID 1400 - 9984 USD
+4. Фрилансер ID 637 - 9981 USD
+5. Фрилансер ID 268 - 9975 USD",true,"SELECT Freelancer_ID, SUM(Earnings_USD) AS Total_Earnings FROM freelancer_earnings_bd GROUP BY Freelancer_ID ORDER BY Total_Earnings DESC LIMIT 5;",Какие 5 фрилансеров имеют наибольший общий доход?,"[(598, 9991), (880, 9988), (1400, 9984), (637, 9981), (268, 9975)]"
+"Какой процент фрилансеров, считающих себя экспертами, выполнил менее 100 проектов?","Процент фрилансеров, считающих себя экспертами, которые выполнили менее 100 проектов, составляет примерно 33.85%.",true,"SELECT COUNT(*) * 100.0 / (SELECT COUNT(*) FROM freelancer_earnings_bd WHERE Experience_Level = 'Expert') AS Expert_Percentage
+FROM freelancer_earnings_bd
+WHERE Experience_Level = 'Expert' AND Job_Completed < 100;","Какой процент фрилансеров, считающих себя экспертами, выполнил менее 100 проектов?","[(33.853354134165365,)]"
+Как распределяется доход фрилансеров в зависимости от региона проживания?,"Доход фрилансеров распределяется по регионам проживания следующим образом:
+
+1. Австралия: 1,479,897 USD
+2. Азия: 1,453,412 USD
+3. США: 1,422,901 USD
+4. Ближний Восток: 1,417,408 USD
+5. Великобритания: 1,413,185 USD
+6. Канада: 1,316,133 USD
+7. Европа: 1,281,319 USD
+
+Австралия имеет наибольший доход среди фрилансеров, в то время как Европа занимает последнее место в этом списке.",true,"SELECT Client_Region, SUM(Earnings_USD) AS Total_Earnings
+FROM freelancer_earnings_bd
+GROUP BY Client_Region
+ORDER BY Total_Earnings DESC;",Как распределяется доход фрилансеров в зависимости от региона проживания?,"[('Australia', 1479897), ('Asia', 1453412), ('USA', 1422901), ('Middle East', 1417408), ('UK', 1413185), ('Canada', 1316133), ('Europe', 1281319)]"
+"Насколько выше доход у фрилансеров, принимающих оплату в криптовалюте, по сравнению с другими способами оплаты?","Доход у фрилансеров, принимающих оплату в криптовалюте, составляет в среднем 5139.30 USD. Для других способов оплаты средние доходы следующие:
+
+- Банковский перевод: 5019.96 USD
+- PayPal: 4976.69 USD
+- Мобильный банкинг: 4923.65 USD
+
+Таким образом, фрилансеры, принимающие оплату в криптовалюте, имеют доход выше, чем у фрилансеров, принимающих оплату через банковские переводы, на 119.34 USD, через PayPal на 162.61 USD, и через мобильный банкинг на 215.65 USD. 
+
+В общем, доход фрилансеров в криптовалюте выше, чем у других способов оплаты.",true,"SELECT AVG(Earnings_USD) AS Average_Earnings, Payment_Method FROM freelancer_earnings_bd GROUP BY Payment_Method ORDER BY Average_Earnings DESC","Насколько выше доход у фрилансеров, принимающих оплату в криптовалюте, по сравнению с другими способами оплаты?","[(5139.301556420233, 'Crypto'), (5019.957489878542, 'Bank Transfer'), (4976.688841201717, 'PayPal'), (4923.651260504202, 'Mobile Banking')]"
