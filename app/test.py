@@ -138,7 +138,7 @@ def run_graph(question: str):
 
 def load_data():
     res = []
-    with open('freelancer_dataset_questions.txt', 'r', encoding='utf-8') as file:
+    with open('../freelancer_dataset_questions.txt', 'r', encoding='utf-8') as file:
         for line in file:
             res.append(line.strip())
     return res
