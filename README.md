@@ -4,6 +4,33 @@ pip install -r requirements.txt
 cd app
 python3 app.py ask 'Какой процент фрилансеров, считающих себя экспертами, выполнил менее 100 проектов?'
 ```
+
+Активация просмотра всех состояний: 
+```
+python3 app.py setup --debug 
+```
+
+Загрузка датасета и создание бд:
+```
+python3 app.py load
+  DATASET_URL: https://www.kaggle.com/api/v1/datasets/download/shohinurpervezshohan/freelancer-earnings-and-job-trends
+  DATASET_NAME: freelancer_earnings_bd
+  DB_PATH: data/freelancer_earnings_bd.db
+```
+
+Установка llm и провайдера: 
+```
+python3 app.py config --help
+Usage: app.py config [OPTIONS]
+
+  Installing an OpenAi API compatible model.
+
+Options:
+  --model TEXT     Name of model to use (for example, gpt-4, llama3, qwen3).
+  --base_url TEXT  Base URL for API requests.
+  --api_key TEXT   LLM provider API key.
+  --help           Show this message and exit.
+```
 ## 1. Подход к решению задачи и технологии
 Для решения поставленной задачи необходимо:
 * Загрузить датасет с kaggle.com и поместить его в SQL-хранилище (sqlite)
